@@ -7,14 +7,14 @@ const WheelOfFortune = () => {
     try {
       const savedData = JSON.parse(localStorage.getItem('wheelData') || '{}');
       return {
-        originalNames: savedData.originalNames || ['Alice', 'Bob', 'Charlie', 'Diana', 'Eve', 'Frank'],
-        currentNames: savedData.currentNames || ['Alice', 'Bob', 'Charlie', 'Diana', 'Eve', 'Frank'],
+        originalNames: savedData.originalNames ||  ['Юра', 'Сергей', 'Костя', 'Полина', 'Рома', 'Кристина', 'Кирилл', 'Андрей', 'Оля', 'Маша'],
+        currentNames: savedData.currentNames ||  ['Юра', 'Сергей', 'Костя', 'Полина', 'Рома', 'Кристина', 'Кирилл', 'Андрей', 'Оля', 'Маша'],
         selectedHistory: savedData.selectedHistory || []
       };
     } catch {
       return {
-        originalNames: ['Alice', 'Bob', 'Charlie', 'Diana', 'Eve', 'Frank'],
-        currentNames: ['Alice', 'Bob', 'Charlie', 'Diana', 'Eve', 'Frank'],
+        originalNames: ['Юра', 'Сергей', 'Костя', 'Полина', 'Рома', 'Кристина', 'Кирилл', 'Андрей', 'Оля', 'Маша'],
+        currentNames: ['Юра', 'Сергей', 'Костя', 'Полина', 'Рома', 'Кристина', 'Кирилл', 'Андрей', 'Оля', 'Маша'],
         selectedHistory: []
       };
     }
