@@ -32,6 +32,7 @@ const WheelOfFortune = () => {
   const wheelRef = useRef(null);
 
   // Сохраняем данные в localStorage при изменении
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const saveToStorage = (data: { originalNames: any; currentNames: any; selectedHistory: any; }) => {
     try {
       localStorage.setItem('wheelData', JSON.stringify({
@@ -47,7 +48,7 @@ const WheelOfFortune = () => {
   // Сохраняем при изменении состояния
   useEffect(() => {
     saveToStorage({ originalNames, currentNames, selectedHistory });
-  }, [originalNames, currentNames, selectedHistory]);
+  }, [originalNames, currentNames, selectedHistory, saveToStorage]);
 
   const colors = [
     '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', 
