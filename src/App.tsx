@@ -235,7 +235,9 @@ const WheelOfFortune = () => {
                   <Play size={20} />
                   <span>{spinning ? 'Крутится...' : 'Крутить!'}</span>
                 </button>
-                
+              </div>
+
+              <div className="flex space-x-4 p-10">
                 <button
                   onClick={resetWheel}
                   className="flex items-center space-x-2 bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-bold transition-colors"
